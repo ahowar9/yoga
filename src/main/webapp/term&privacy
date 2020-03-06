@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Path of Light Yoga Studio</title>
+  <link th:href="${contextPath}resource/static/bootstrap.min.css}" rel="stylesheet">
+      <link href="${contextPath}/resources/css/style.css" rel="stylesheet">    
+</head>
+ <body style="background-color: #3F2860;">
+	<div id="wrapper" style="background-color:#F5F5F5; height: 100%;">
+	<div>
+	<header>
+		<h1 class="display-4" style="font-family: sans-serif; font-size:3em; color: #3F2860; background-image: url(lilyheader.jpg); width: 100%; height: 150px;"> Path of Light Yoga Studio</h1>
+	</header>	
+	</div>
+	<nav style="font-family: sans-serif; background-color: #9BC1C2; display: block;
+		 text-align: center; padding: 14px 16px; ext-decoration: none;">
+	 <a href="index.html">Home</a> &nbsp;  
+	 <a href="schedule.html">Schedule</a> &nbsp;
+	 <a href="deposit.html">Checkout</a> &nbsp; 
+	 <a href="thankyou.html">Thank You</a> &nbsp;
+	</nav>
+	<h1>This Is The Terms & Privacy Page</h1>
+	<br>
+	<h2>Build on a foundation you can trust</h2>
+	<br>
+	<p>To earn your trust, we build security, audit, 
+		and compliance solutions with the customer in mind.</p>
+	<br>
+	<p> In this area there would be more information on what the privacy and terms are.</p>
+	 <footer style="background-color: #9BC1C2;font-size: small;font-style: italic;text-align: center;padding: 1em;">		Copyright &copy; 2016 Path of Light Yoga Studio<br>
+		<a href="mailto:anita.howard@kontrac.com">anita.howard@kontrac.com</a>
+	  </footer>
+	  </div>
+</body>
+</html>

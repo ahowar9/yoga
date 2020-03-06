@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:index="headerfiles">
+      <meta charset="UTF-8"/>	  
+	  <title>Path of Light Yoga Studio</title>
+	  <script src="javascript/jQuery.js"></script>
+	  <script type="text/javascript"></script>
+	    
+      <link rel="stylesheet" type="text/css" th:href="css/style.css}">
+</head>
+<body style="background-color: #3F2860;">
+	<div id="wrapper" style="background-color:#F5F5F5;">
+	<div>
+	<header>
+		<h1 class="display-4" style="font-family: sans-serif; font-size:3em; color: #3F2860; background-image: url(lilyheader.jpg); width: 100%; height: 150px;"> Path of Light Yoga Studio</h1>
+	</header>
+	</div>
+	<nav style="font-family: sans-serif; background-color: #98C1C2; display: block;
+		 text-align: center; padding: 14px 16px; ext-decoration: none;">
+	  <a href="index.html">Home</a> &nbsp; 
+	  <a href="schedule.html">Schedule</a> &nbsp;
+	  <a href="deposit.html">Checkout</a> &nbsp; 
+	  <a href="thankyou.html">Thank You</a> &nbsp;
+	</nav>
+<h2 style="color: #3F2860;">Please Checkout Below</h2>
+<br>
+<div class="container">
+<img src="images/restorativeyoga.jpg" alt="restorative" width="100%" height="50%">
+	<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+		<div class="row">
+          <div class="col-50">
+            <h3 style="color: #3F2860;">Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <br>
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <br>
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <br>
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+			<br>
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <br>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3 style="color: #3F2860;">Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <br>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <br>
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <br>
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+			<br>
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <br>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+			<br>
+        </div>
+        <input type="submit" value="Checkout" class="btn">
+      </form>
+    </div>
+  </div>
+
+  <div class="col-25">
+    <div class="container">
+      <h4>Cart
+        <span class="price" style="color: #3F2860;">
+          <i class="fa fa-shopping-cart"></i>
+          <b>4</b>
+        </span>
+      </h4>
+     <hr>
+      <p>Total <span class="price" style="color:black"></span></p>
+    </div>
+  </div>
+   <footer style="background-color: #9BC1C2;font-size: small;font-style: italic;text-align: center;padding: 1em;">		Copyright &copy; 2016 Path of Light Yoga Studio<br>
+		<a href="mailto:anita.howard@kontrac.com">anita.howard@kontrac.com</a>
+   </footer>
+</div>
+</div>
+</div>
+</body>
+</html>

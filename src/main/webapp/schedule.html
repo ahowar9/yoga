@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:index="headerfiles">
+      <meta charset="UTF-8"/>	  
+	  <title>Path of Light Yoga Studio</title>
+	  <script src="javascript/jQuery.js"></script>
+	  <script type="text/javascript"></script>
+	    
+      <link rel="stylesheet" type="text/css" th:href="css/style.css}">
+</head>
+<body style="background-color: #3F2860;">
+	<div id="wrapper" style="background-color:#F5F5F5;">
+	<div>
+	<header>
+		<h1 class="display-4" style="font-family: sans-serif; font-size:3em; color: #3F2860; background-image: url(lilyheader.jpg); width: 100%; height: 150px;"> Path of Light Yoga Studio</h1>
+	</header>
+	</div>
+	<nav style="font-family: sans-serif; background-color: #98C1C2; display: block;
+		 text-align: center; padding: 14px 16px; ext-decoration: none;">
+	  <a href="index.html">Home</a> &nbsp;  
+	  <a href="schedule.html">Schedule</a> &nbsp;
+	  <a href="deposit.html">Checkout</a> &nbsp; 
+	  <a href="thankyou.html">Thank You</a> &nbsp;
+	</nav>
+	<div class="container">
+		<img src="images/yogamat.jpg" alt="yoga mat" width=100% height="300">
+	<h1 style="color: #3F2860;">Yoga Classes:</h1>
+		<dl>
+		<dt style="color: #3F2860;"><strong>Gentle Hatha Yoga</strong></dt>
+		<dd>Intended for beginners and anyone wishing a grounded foundation in the practice of yoga, this 60 minute class of poses and slow movement focuses on asana (proper alignment and posture), pranayama (breath work), and guided meditation to foster your mind and body connection.</dd>
+		<dt style="color: #3F2860;"><strong>Vinyasa Yoga</strong></dt>
+		<dd>Although designed for intermediate to advanced students, beginners are welcome to sample this 60 minute class that focuses on breath-synchronized movement &mdash; you will inhale and exhale as you flow energetically through yoga poses.</dd>
+		<dt style="color: #3F2860;"><strong>Restorative Yoga</strong></dt>
+		<dd>This 90 minute class features very slow movement and long poses that are supported by a chair or wall. This calming, restorative experience is suitable for students of any level of experience. This practice is can be a perfect way to help rehabilitate an injury.</dd>
+		</dl>
+	</div>
+	<br>
+	<p style="color: #3F2860;">Mats, blocks, and blankets provided. Please arrive 10 minutes before your class
+	begins. Relax in our Serenity Lounge before or after your class.</p>
+	<h2 style="color: #3F2860;">Yoga Schedule</h2>
+	<h3 style="color: #3F2860;">Monday &mdash; Friday</h3>
+		<ul>
+		  <li>9:00am Gentle Hatha Yoga</li>
+		  <li>10:30am Vinyasa Yoga</li>
+		  <li>5:30pm Restorative Yoga</li>
+		  <li>7:00pm Gentle Hatha Yoga</li>
+		</ul>
+	<h3 style="color: #3F2860;">Saturday &amp; Sunday</h3>
+		<ul>
+		  <li>10:30am Gentle Hatha Yoga</li>
+		  <li>Noon Vinyasa Yoga</li>
+		  <li>1:30pm Gentle Hatha Yoga</li>
+		  <li>3:00pm Vinyasa Yoga</li>
+		  <li>5:30pm Restorative Yoga</li>
+		</ul>
+	<form action="" method="post" th:object="${classes}">
+      <fieldset>
+        <legend>Yoga Class</legend>
+        Class: 
+        <select th:field="*{class}">
+          <option value=""></option>
+          <option th:each="yogaClass : ${yogaClasses}" th:value="${yogaClass.description}" th:text="${yogaClass.description}">Gentle Hatha Yoga</option>
+          <option th:each="yogaClass : ${yogaClasses}" th:value="${yogaClass.description}" th:text="${yogaClass.description}">Vinyasa Yoga</option>
+          <option th:each="yogaClass : ${yogaClasses}" th:value="${yogaClass.description}" th:text="${yogaClass.description}">Restorative Yoga</option>
+        </select>
+        <br/>
+        <br>
+        Day of The Week:
+        <select th:field="*{weekDay}">
+          <option value=""></option>
+          <option th:each="weekDay : ${weekDays}" th:value="${weekDay.description}" th:text="${weekDay.description}">
+         	Sunday</option>
+		  <option th:each="weekDay : ${weekDays}" th:value="${weekDay.description}" th:text="${weekDay.description}">
+         	Monday</option>
+          <option th:each="weekDay : ${weekDays}" th:value="${weekDay.description}" th:text="${weekDay.description}">
+         	Tuesday</option>
+          <option th:each="weekDay : ${weekDays}" th:value="${weekDay.description}" th:text="${weekDay.description}">
+         	Wednesday</option>
+          <option th:each="weekDay : ${weekDays}" th:value="${weekDay.description}" th:text="${weekDay.description}">
+         	Thursday</option>
+          <option th:each="weekDay : ${weekDays}" th:value="${weekDay.description}" th:text="${weekDay.description}">
+         	Friday</option>
+          <option th:each="weekDay : ${weekDays}" th:value="${weekDay.description}" th:text="${weekDay.description}">
+         	Saturday</option>        	
+        </select>  
+      <br/>
+        <legend>Class Time</legend>
+        <div th:each="time : ${times}">
+          <input type="checkbox" th:value="${time.id}" th:field="*{times}"/>
+          <label th:for="${#ids.prev('times')}" th:text="${time.description}">9:00am</label>
+        </div>
+        <div th:each="time : ${times}">
+          <input type="checkbox" th:value="${time.id}" th:field="*{times}"/>
+          <label th:for="${#ids.prev('times')}" th:text="${time.description}">10:30am</label>
+        </div>
+        <div th:each="time : ${times}">
+          <input type="checkbox" th:value="${time.id}" th:field="*{times}"/>
+          <label th:for="${#ids.prev('times')}" th:text="${time.description}">Noon</label>
+        </div>
+        <div th:each="time : ${times}">
+          <input type="checkbox" th:value="${time.id}" th:field="*{times}"/>
+          <label th:for="${#ids.prev('times')}" th:text="${time.description}">1:30pm</label>
+        </div>
+        <div th:each="time : ${times}">
+          <input type="checkbox" th:value="${time.id}" th:field="*{times}"/>
+          <label th:for="${#ids.prev('times')}" th:text="${time.description}">3:00pm</label>
+        </div>
+        <div th:each="time : ${times}">
+          <input type="checkbox" th:value="${time.id}" th:field="*{times}"/>
+          <label th:for="${#ids.prev('times')}" th:text="${time.description}">5:30pm</label>
+        </div>
+        <div th:each="time : ${times}">
+          <input type="checkbox" th:value="${time.id}" th:field="*{times}"/>
+          <label th:for="${#ids.prev('times')}" th:text="${time.description}">7:00pm</label>
+        </div>
+      </fieldset>
+      <button style="color: #3F2860;">Add Class</button>
+    </form>
+     <footer style="background-color: #9BC1C2;font-size: small;font-style: italic;text-align: center;padding: 1em;">		Copyright &copy; 2016 Path of Light Yoga Studio<br>
+		<a href="mailto:anita.howard@kontrac.com">anita.howard@kontrac.com</a>
+	 </footer>
+  </div>
+</body>
+</html>

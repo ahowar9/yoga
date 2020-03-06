@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:index="headerfiles">
+      <meta charset="UTF-8"/>	  
+	  <title>Path of Light Yoga Studio</title>
+	
+      <link rel="stylesheet" type="text/css" th:href="css/style.css}">
+	  <script src="javascript/jQuery.js"></script>
+	  
+	  <script type="text/javascript"></script>
+	    
+</head>
+ <body style="background-color: #3F2860;">
+	<div id="wrapper" style="background-color:#F5F5F5;">
+	<div>
+	<header>
+		<h1 class="display-4" style="font-family: sans-serif; font-size:3em; color: #3F2860; background-image: url(lilyheader.jpg); width: 100%; height: 150px;"> Path of Light Yoga Studio</h1>
+	</header>
+	</div>
+	<nav style="font-family: sans-serif; background-color: #98C1C2; display: block;
+		 text-align: center; padding: 14px 16px; ext-decoration: none;">
+	 <a href="index.html">Home</a> &nbsp;  
+	 <a href="schedule.html">Schedule</a> &nbsp;
+	 <a href="deposit.html">Checkout</a> &nbsp; 
+	 <a href="thankyou.html">Thank You</a> &nbsp;
+	</nav>
+	<div class="hero-image">
+	<img src="images/life.jpg"alt="live to yoga " width="350" height="180" align="right"/>
+	<div class="container">
+	<div class="jumbotron">
+<h2 style="color: #3F2860;">We are looking forward to seeing you!</h2>
+<br>
+<div class="container">
+      <form method="POST" action="${contextPath}/schedule.html" class="form-signin">
+        <h2 class="form-heading">Log in</h2>
+
+        <div class="form-group ${error != null ? 'has-error' : ''}">
+            <span>Username</span>
+            <input name="username" type="text" class="form-control" placeholder="Username"
+                   autofocus="true"/>
+                   <br>
+             <span>Password</span>
+            <input name="password" type="password" class="form-control" placeholder="Password"/>
+           		   <br>
+            <span>Click Login</span>
+            		<br>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+					<br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+        </div>
+      </form>
+    </div>
+	 <footer style="background-color: #9BC1C2;font-size: small;font-style: italic;text-align: center;padding: 1em;">		Copyright &copy; 2016 Path of Light Yoga Studio<br>
+		<a href="mailto:anita.howard@kontrac.com">anita.howard@kontrac.com</a>
+	 </footer>
+  </div>
+ </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>  
+	<meta charset="UTF-8"/>
+	  <title>Path of Light Yoga Studio</title>
+     
+      <link th:href="${contextPath}resource/static/bootstrap.min.css}" rel="stylesheet">
+      <link href="${contextPath}/resources/css/style.css" rel="stylesheet">    
+</head>
+ <body style="background-color: #3F2860;">
+	<div id="wrapper" style="background-color:#F5F5F5;">
+	<div>
+	<header>
+		<h1 class="display-4" style="font-family: sans-serif; font-size:3em; color: #3F2860; background-image: url(lilyheader.jpg); width: 100%; height: 150px;"> Path of Light Yoga Studio</h1>
+	</header>	
+	</div>
+	<nav style="font-family: sans-serif; background-color: #9BC1C2; display: block;
+		 text-align: center; padding: 14px 16px; ext-decoration: none;">
+	 <a href="index.html">Home</a> &nbsp;  
+	 <a href="schedule.html">Schedule</a> &nbsp;
+	 <a href="deposit.html">Checkout</a> &nbsp; 
+	 <a href="thankyou.html">Thank You</a> &nbsp;
+	</nav>
+	<div class="container">
+	<div class="jumbotron">
+	<div class="hero-image">
+	<img src="images/yogadoor.jpg"alt="door to yoga studio" width="225" height="300" align="right"/>
+	<h2 style="color: #3F2860;">Find Your Inner Light</h2>
+	<p class="lead"><span class="studio">Path of Light Yoga Studio</span> provides 
+		all levels of yoga practice in a tranquil, peaceful environment. 
+		Whether you are new to yoga or an experienced practitioner, our 
+		dedicated instructors can develop a practice to meet your needs. 
+		Let your inner light shine at the <span class="studio">Path of Light Yoga Studio</span>.</p>
+		
+	<p style="color: #3F2860;">We offer many different classes such as:</p>
+        <ul>
+		  <li>Hatha, Vinyasa, and Restorative Yoga classes</li>
+		  <li>Drop-ins welcome</li>
+		  <li>Mats, blocks, and blankets provided</li>
+		  <li>Relax in our Serenity Lounge before or after your class</li>
+		</ul>
+		  <br>
+	 <p style="color: #3F2860;">Mats are provided. But if you prefer to purchase your own, please click on the link below!)</p>
+     <p class="lead">
+		<a class="btn btn-primary btn-lg" href="https://www.amazon.com/Gaiam-Essentials-Fitness-Exercise-Easy-Cinch/dp/B07H9PZ42P/ref=sr_1_6?crid=T5OR4CPHWA1A&dchild=1&keywords=yoga+mat&qid=1575937356&sprefix=yoga+mat%2Caps%2C233&sr=8-6" role="button"></a>
+     </p>
+	<P style="color: #3F2860;">PLEASE REGISTER BELOW</P>
+	 <hr class="my-4">
+    <h1 style="color: #3F2860;">Register</h1>
+    <p style="color: #3F2860;">Please fill in this form to create an account.</p>
+    <hr>
+     <form action="action_page.php">
+  <div class="container">
+  
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+		<br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+		<br>
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    	<br>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    <p>By creating an account you agree to our <a href="termprivacy.html">Terms & Privacy</a>.</p>
+  </div>
+     <div class="container signin">
+    		<p>Already have an account? <a href="login.html">Sign in</a></p>
+     </div>
+  </form>
+      <footer style="background-color: #9BC1C2;font-size: small;font-style: italic;text-align: center;padding: 1em;">		Copyright &copy; 2016 Path of Light Yoga Studio<br>
+		<a href="mailto:anita.howard@kontrac.com">anita.howard@kontrac.com</a>
+	  </footer>
+    	</div>
+      </div>
+     </div>
+     </div>
+    </body>  
+</html>
